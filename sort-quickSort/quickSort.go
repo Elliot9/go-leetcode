@@ -1,5 +1,6 @@
 package main
 
+// log2 n * n
 func quickSort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
