@@ -1,4 +1,6 @@
 # 219. Contains Duplicate II
+#### tags:
+- HashSet
 
 ## 題目：
 給定一個整數陣列 nums 和一個整數 k，如果陣列中有兩個不同的索引 i 和 j，使得 nums[i] == nums[j] 和 abs（i - j） <= k，則返回 true。

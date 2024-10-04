@@ -1,4 +1,6 @@
 # 217. Contains Duplicate
+#### tags:
+- HashSet
 
 ## 題目：
 給定一個整數陣列 nums，判斷是否存在重複的數字。如果存在，回傳 true，否則回傳 false。

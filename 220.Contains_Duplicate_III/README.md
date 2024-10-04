@@ -1,4 +1,8 @@
 # 220. Contains Duplicate III
+#### tags:
+- HashSet
+- Bucket Sort
+- Sliding Window
 
 ## 題目：
 給定一個整數陣列 nums 和兩個整數 indexDiff 和 valueDiff，如果陣列中有兩個不同的索引 i 和 j
@@ -8,7 +12,7 @@
 - 暴力解法
 - 桶排序（Bucket Sort）和滑動窗口(Sliding Window)
 
-## 解題思路：
+## 解題思路： 
 ### 桶
 每個桶會儲存一個固定範圍內的數字（範圍大小為 valueDiff + 1）。這樣可以確保同一個桶內的兩個數字差值一定小於或等於 valueDiff。
 依據每個數字的數值將其分配到對應的桶。例如，數字 num 被分配到桶 ID 為 num / (valueDiff + 1) 的桶中，對於負數則需特殊處理。
