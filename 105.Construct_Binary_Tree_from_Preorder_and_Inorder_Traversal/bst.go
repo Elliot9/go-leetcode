@@ -34,6 +34,7 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 	return rootNode
 }
 
+// can use hash map reduce searching index
 func findIndex(order []int, num int) int {
 	for i, v := range order {
 		if v == num {
