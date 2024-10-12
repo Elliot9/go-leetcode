@@ -17,7 +17,10 @@ func combinationSum(candidates []int, target int) [][]int {
 			return
 		}
 
-		// startIndex 用于避免重复
+		// startIndex 用于避免重複
+		// 假設數字 [1,2,3,4]
+		// 處理 1 時會考慮 [[1,2], [1,3], [1,4]]
+		// 處理 2 時會考慮 [[2,3], [2,4]]  <-- 就不考慮	[2,1] 因和 [1,2] 重複
 		for i := startIndex; i < len(candidates); i++ {
 			dfs(result, append(combination, candidates[i]), target-candidates[i], i)
 		}
