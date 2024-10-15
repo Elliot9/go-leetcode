@@ -1,7 +1,7 @@
 # 973. K 個最接近原點的點
 #### tags：
 - heap（priority queue）
-- sort
+- sort(quick sort)
 
 ## 題目：
 給定一個數組 points，其中 points[i] = [xi, yi] 表示 X-Y 平面上的一個點，以及一個整數 k，返回離原點 (0, 0) 最近的 k 個點。
@@ -12,7 +12,7 @@
 
 ## 可使用的方法：
 - Max Heap
-- Quick Select
+- Quick Select(divide left,right sort)
 - Sort
 
 ## 解題思路： 
