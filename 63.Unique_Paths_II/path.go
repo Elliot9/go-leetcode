@@ -1,25 +1,21 @@
 package main
 
-func uniquePaths(m int, n int) int {
-	if m < 1 || n < 1 {
+func uniquePathsWithObstacles(obstacleGrid [][]int) int {
+	if len(obstacleGrid) == 0 || len(obstacleGrid[0]) == 0 {
 		return 0
 	}
 
+	ROWS := len(obstacleGrid)
+	COLUMNS := len(obstacleGrid[0])
 	visited := make(map[int]map[int]int)
-
 	var dp func(r, c int, visited map[int]map[int]int) int
-
 	dp = func(r, c int, visited map[int]map[int]int) int {
-		if r == m && c == n {
-			return 1
-		}
-
-		if r > m || c > n {
+		if r >= ROWS || c >= COLUMNS || obstacleGrid[r][c] == 1 {
 			return 0
 		}
 
-		if value, ok := visited[r][c]; ok {
-			return value
+		if r == ROWS-1 && c == COLUMNS-1 && obstacleGrid[r][c] == 0 {
+			return 1
 		}
 
 		if _, ok := visited[r]; !ok {
@@ -34,5 +30,5 @@ func uniquePaths(m int, n int) int {
 		return visited[r][c]
 	}
 
-	return dp(1, 1, visited)
+	return dp(0, 0, visited)
 }
